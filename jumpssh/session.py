@@ -336,7 +336,7 @@ class SSHSession(object):
 
                             # print output all along the command is running
                             if not silent and continuous_output and len(data) > 0:
-                                print(data)
+                                print(data.rstrip())
 
                             if input_data and channel.send_ready():
                                 # We received a potential prompt.
